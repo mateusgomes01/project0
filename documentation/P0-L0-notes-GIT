@@ -96,3 +96,9 @@ linux commands
 **************
 locate *textQuery* = insert the desired file name inside the text query in asteriscs to find any file on computer
 https://www.howtoforge.com/linux-locate-command/
+
+******************
+Raspibian Commands
+******************
+/opt/vc/bin/vcgencmd measure_temp = shows raspibian core temp
+
