@@ -143,3 +143,7 @@ One more useful feature is inheritance, which is similar to the object-oriented 
 %message defines a general pattern that can be inherited in other style definitions using the @extend %message syntax. In addition, other style properties can be added.
 
 source: https://cs50.harvard.edu/web/notes/1/
+
+Transform tool in CSS: https://www.tutorialrepublic.com/faq/how-to-transform-image-size-on-mouse-hover-without-affecting-the-layout-in-css.php
+
+CSS Animation: https://www.the-art-of-web.com/css/css-animation/
