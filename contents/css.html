@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+    <head>
+			<!--This line of code makes the webpage adjust for mobile or other devices-->
+			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+			<!-- https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use -->
+			<link href="../../assets/@fortawesome/fontawesome-free/css/all.min.css?1584830890" rel="stylesheet">
+			
+			<!-- CS50's general stylesheet-->
+			<link href="./cs50-git.css" rel="stylesheet">
+
+			<!-- http://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
+			<script src="../../assets/jquery/dist/jquery.min.js?1584830890"></script>
+			<script src="../../assets/popper.js/dist/umd/popper.min.js?1584830890"></script>
+			<script src="../../assets/bootstrap/dist/js/bootstrap.min.js?1584830890"></script>
+
+			<!-- https://github.com/pellepim/jstimezonedetect -->
+			<script src="../../assets/jstz.min.js?1584830890"></script>
+
+			<!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+			<script src="../../assets/moment.min.js?1584830890"></script>
+			<script src="../../assets/moment-timezone-with-data.min.js?1584830890"></script>
+
+      <title>CSS Notes</title>
+        
+			<!-- Bootstrap core CSS -->
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+			<link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+			<style>
+				.bd-placeholder-img {
+					font-size: 1.125rem;
+					text-anchor: middle;
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					user-select: none;
+				}
+
+				@media (min-width: 768px) {
+					.bd-placeholder-img-lg {
+						font-size: 3.5rem;
+					}
+				}
+			</style>			
+				
+			<!-- Custom styles for this template -->
+			<link href="../album.css" rel="stylesheet">
+			
+    </head>
+    <body>
+				
+    <header>
+			<div class="collapse bg-dark" id="navbarHeader">
+				<div class="container">
+					<div class="row">
+					<div class="col-sm-8 col-md-7 py-4">
+						<h4 class="text-white">About</h4>
+						<p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+					</div>
+					<div class="col-sm-4 offset-md-1 py-4">
+						<h4 class="text-white">Contact</h4>
+						<ul class="list-unstyled">
+						<li><a href="#" class="text-white">Follow on Twitter</a></li>
+						<li><a href="#" class="text-white">Like on Facebook</a></li>
+						<li><a href="#" class="text-white">Email me</a></li>
+						</ul>
+					</div>
+					</div>
+				</div>
+				</div>
+				<div class="navbar navbar-dark bg-dark shadow-sm">
+				<div class="container d-flex justify-content-between">
+					<a href="../index.html" class="navbar-brand d-flex align-items-center">
+					<svg class="bi bi-house" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 00.5.5h9a.5.5 0 00.5-.5V7h1v6.5a1.5 1.5 0 01-1.5 1.5h-9A1.5 1.5 0 012 13.5zm11-11V6l-2-2V2.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5z" clip-rule="evenodd"/>
+						<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 011.414 0l6.647 6.646a.5.5 0 01-.708.708L8 2.207 1.354 8.854a.5.5 0 11-.708-.708L7.293 1.5z" clip-rule="evenodd"/>
+					</svg><strong>Home</strong>
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+			</div>
+		</header>
+		
+		<main class="container markdown-body" style="margin-bottom: 612px;">
+
+<h2 id="css">CSS</h2>
+
+<ul>
+  <li data-marker="*">CSS (Cascading Style Sheets) is a language used to interact with and style HTML, changing the way it looks according to a series of rules. CSS is what makes websites look nice.</li>
+  <li data-marker="*">CSS can be applied to HTML in a variety of ways:
+    <ul>
+      <li data-marker="*">The <code class="highlighter-rouge">style</code> attribute: <code class="highlighter-rouge">&lt;h5 style="color:blue;text-align:center;"&gt;&lt;/h5&gt;</code>
+        <ul>
+          <li data-marker="*">The semicolon-separated CSS properties passed to <code class="highlighter-rouge">style</code> will be applied to whatever the tag containts.</li>
+        </ul>
+      </li>
+      <li data-marker="*">The <code class="highlighter-rouge">&lt;style&gt;&lt;/style&gt;</code> tags:
+  ```html</li>
+    </ul>
+    
+      <style>
+          h5, h6 {
+              color: blue;
+              text-align: center;
+          }
+      </style>
+  
+    <p>```
+      * This is a useful paradigm to use when reusing the same styling many times throughout a page. The properties listed will apply to all of the tags that are listed.</p>
+    <ul>
+      <li data-marker="*">A separate <code class="highlighter-rouge">.css</code> file: add <code class="highlighter-rouge">&lt;link rel="stylesheet" href="path/to/styles.css"&gt;</code> to the header, and move the CSS code (same format as used inside the <code class="highlighter-rouge">&lt;style&gt;&lt;/style&gt;</code> tags.
+        <ul>
+          <li data-marker="*">This is often an even better paradigm because it separates two distinctly different things: structure (HTML) and style (CSS), while also being easier to manage and read.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li data-marker="*">Some common CSS properties (those that take arguments in pixels often can take a percentage or simply <code class="highlighter-rouge">auto</code>):
+    <ul>
+      <li data-marker="*"><code class="highlighter-rouge">color: blue</code>, <code class="highlighter-rouge">color: #0c8e05</code> : can be 1 of ~140 named colors, or a hexadecimal value that represents an RGB value</li>
+      <li data-marker="*"><code class="highlighter-rouge">text-align: left</code> : aligns text to <code class="highlighter-rouge">left</code>; other possible arguments are <code class="highlighter-rouge">center</code>, <code class="highlighter-rouge">right</code>, or <code class="highlighter-rouge">justify</code></li>
+      <li data-marker="*"><code class="highlighter-rouge">background-color: teal</code> : sets the background to a color, which is the same format as the <code class="highlighter-rouge">color</code> property</li>
+      <li data-marker="*"><code class="highlighter-rouge">height: 150px</code> : sets the height of an area</li>
+      <li data-marker="*"><code class="highlighter-rouge">width: 150px</code> : sets the width of an area</li>
+      <li data-marker="*"><code class="highlighter-rouge">margin: 30px</code> : sets the margin around all four sides of an area
+        <ul>
+          <li data-marker="*">can also be broken up into <code class="highlighter-rouge">margin-left</code>, <code class="highlighter-rouge">margin-right</code>, <code class="highlighter-rouge">margin-top</code>, and <code class="highlighter-rouge">margin-bottom</code></li>
+        </ul>
+      </li>
+      <li data-marker="*"><code class="highlighter-rouge">padding: 20px</code> : sets the padding around text inside an area
+        <ul>
+          <li data-marker="*">can be broken up the same way as <code class="highlighter-rouge">margin</code></li>
+        </ul>
+      </li>
+      <li data-marker="*"><code class="highlighter-rouge">font-family: Arial, sans-serif</code> : sets the font family to be used
+        <ul>
+          <li data-marker="*">a comma-separated list provides alternatives in case a browser doesn’t support a specific font</li>
+          <li data-marker="*">generic families such as <code class="highlighter-rouge">sans-serif</code> will use browser defaults</li>
+        </ul>
+      </li>
+      <li data-marker="*"><code class="highlighter-rouge">font-size: 28px</code> : sets the font size</li>
+      <li data-marker="*"><code class="highlighter-rouge">font-weight: bold</code>: sets the font weight to quality, a relative measure (<code class="highlighter-rouge">lighter</code>), or a number (<code class="highlighter-rouge">200</code>)</li>
+      <li data-marker="*"><code class="highlighter-rouge">border: 3px solid blue</code>: sets a border around an area</li>
+    </ul>
+  </li>
+  <li data-marker="*">There are lots of CSS properties that can be used in a lot of different ways. Check out the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">wonderfully extensive documentation</a> for more information.</li>
+</ul>
+
+<h2 id="sectioning-with-html-and-css">Sectioning with HTML and CSS</h2>
+
+<ul>
+  <li data-marker="*">Two special tags allow us to break up a our webpage into sections:
+    <ul>
+      <li data-marker="*"><code class="highlighter-rouge">&lt;div&gt;&lt;/div&gt;</code> : vertical division of a webpage</li>
+      <li data-marker="*"><code class="highlighter-rouge">&lt;span&gt;&lt;/span&gt;</code> : section of a webpage inside, for example, text</li>
+    </ul>
+  </li>
+  <li data-marker="*">Both <code class="highlighter-rouge">&lt;div&gt;&lt;/div&gt;</code> and <code class="highlighter-rouge">&lt;span&gt;&lt;/span&gt;</code> don’t really do much by themselves, but they allow for the labelling of sections of a webpage..</li>
+  <li data-marker="*">Different sections of a webpage can be referenced with the <code class="highlighter-rouge">id</code> and <code class="highlighter-rouge">class</code> attributes. <code class="highlighter-rouge">id</code>s uniquely identify elements, but there can be an arbitary number of elements with a given <code class="highlighter-rouge">class</code>.</li>
+  <li data-marker="*"><code class="highlighter-rouge">id</code>s can be referenced in CSS with <code class="highlighter-rouge">#id</code> and <code class="highlighter-rouge">class</code>es can be referenced with <code class="highlighter-rouge">.class</code>. <code class="highlighter-rouge">id</code>s and <code class="highlighter-rouge">class</code>es, therefore, can be used to style the same types of areas (3 different <code class="highlighter-rouge">&lt;div&gt;&lt;/div&gt;</code>, for example) in different ways.</li>
+</ul>
+
+
+<h2 id="more-on-css">More on CSS</h2>
+
+<ul>
+  <li data-marker="*">CSS selectors are used to select different parts of a website to style in particular ways.</li>
+  <li data-marker="*">Some common CSS selectors:</li>
+  <li data-marker="*">Select <code class="highlighter-rouge">h1</code> and <code class="highlighter-rouge">h2</code>
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span> <span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">Select all <code class="highlighter-rouge">li</code> that are descendants of <code class="highlighter-rouge">ol</code> (not necessarily immediate descendants
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">ol</span> <span class="nt">li</span> <span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">Select all <code class="highlighter-rouge">li</code> that are immediate children of <code class="highlighter-rouge">ol</code>
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">ol</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">Select all <code class="highlighter-rouge">input</code> fields with the attribute <code class="highlighter-rouge">type=text</code>
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="nt">text</span><span class="o">]</span> <span class="p">{</span>
+      <span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">Select all <code class="highlighter-rouge">button</code>s with the pseudoclass <code class="highlighter-rouge">hover</code>
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">button</span><span class="nd">:hover</span> <span class="p">{</span>
+      <span class="nl">background-color</span><span class="p">:</span> <span class="no">orange</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">A ‘pseudoclass’ is a special state of an HTML element. In this example, the state is whether or not the cursor is hovering over a button.</li>
+    </ul>
+  </li>
+  <li data-marker="*">Select all <code class="highlighter-rouge">before</code> pseudoelements of the element <code class="highlighter-rouge">a</code>
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">a</span><span class="nd">::before</span> <span class="p">{</span>
+      <span class="nl">content</span><span class="p">:</span> <span class="s1">"\21d2 Click here: "</span><span class="p">;</span>
+      <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">A ‘pseudoelement’ is a way to affect certain parts of an HTML element. In this example, the <code class="highlighter-rouge">before</code> selector applies <code class="highlighter-rouge">content</code> with its included styling before the contents of all <code class="highlighter-rouge">a</code> elements.</li>
+      <li data-marker="*"><code class="highlighter-rouge">\21d2</code> is a hexadecimal value for a Unicode icon, which can represent symbols like emoji.</li>
+    </ul>
+  </li>
+  <li data-marker="*">Select all <code class="highlighter-rouge">selection</code> pseudoelements of the element <code class="highlighter-rouge">p</code>
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">p</span><span class="nd">::selection</span> <span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+      <span class="nl">background-color</span><span class="p">:</span> <span class="no">yellow</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="responsive-design">Responsive Design</h2>
+
+<ul>
+  <li data-marker="*">Responsive design is the idea that a website should look good regardless of the platform its viewed from.</li>
+  <li data-marker="*">One way we can do this is by using a ‘media query’:
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="o">&lt;</span><span class="nt">style</span><span class="o">&gt;</span>
+      <span class="k">@media</span> <span class="n">print</span> <span class="p">{</span>
+          <span class="nc">.screen-only</span> <span class="p">{</span>
+              <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="o">&lt;/</span><span class="nt">style</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nt">body</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nt">p</span> <span class="nt">class</span><span class="o">=</span><span class="s1">"screen-only"</span><span class="o">&gt;</span><span class="nt">This</span> <span class="nt">will</span> <span class="nt">not</span> <span class="nt">appear</span> <span class="nt">when</span> <span class="nt">printed</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="nt">body</span><span class="o">&gt;</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*"><code class="highlighter-rouge">@media</code> is a media query, which means the following CSS will be applied only in certain situations, namely, when the webpage is being printed. <code class="highlighter-rouge">.screen-only</code> is a class selector which identifies what content we want to be print only
+        <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">500px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nt">body</span> <span class="p">{</span>
+      <span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="p">:</span> <span class="m">499px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nt">body</span> <span class="p">{</span>
+      <span class="nl">background-color</span><span class="p">:</span> <span class="no">yellow</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></div>        </div>
+      </li>
+      <li data-marker="*">When the width of the screen is at least 500px, the background color of <code class="highlighter-rouge">body</code> will be red, while if it is less than 499px, the background color of <code class="highlighter-rouge">body</code> will be yellow.</li>
+      <li data-marker="*">In order to interact with the screen size, the following must be included in <code class="highlighter-rouge">head</code>: <code class="highlighter-rouge">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+        <ul>
+          <li data-marker="*"><code class="highlighter-rouge">viewport</code> is the visible area on which the screen is being displayed. <code class="highlighter-rouge">content</code> refers to the entire webpage the <code class="highlighter-rouge">width</code> of which is being set to <code class="highlighter-rouge">device-width</code>.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li data-marker="*">Another tool is ‘flexbox’. Flexbox allows for the reorganization of content based on the size of the viewport.
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nc">.container</span> <span class="p">{</span>
+      <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+      <span class="nl">flex-wrap</span><span class="p">:</span> <span class="n">wrap</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">By setting <code class="highlighter-rouge">display: flex</code> and <code class="highlighter-rouge">flex-wrap: wrap</code>, content will wrap vertically if necessary, so no content is lost when the width of the screen is shrunk.</li>
+    </ul>
+  </li>
+  <li data-marker="*">A grid of content can be achieved in a similar fashion.
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nc">.grid</span> <span class="p">{</span>
+      <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+      <span class="py">grid-column-gap</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+      <span class="py">grid-row-gap</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+      <span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">200px</span> <span class="m">200px</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">By setting <code class="highlighter-rouge">display: grid</code>, all the different characteristics of a grid layout can be used to format content. In particular, when defining <code class="highlighter-rouge">grid-template-colummns</code>, the final column can be set to <code class="highlighter-rouge">auto</code>, filling up however much screen space may be left. If multiple columns are set to <code class="highlighter-rouge">auto</code>, they will equally share the remaining space.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="bootstrap">Bootstrap</h2>
+
+<ul>
+  <li data-marker="*">Bootstrap is a CSS library written to help make clean, responsive, and nice-looking websites without having to remember the gritty details about flexboxes or grids everytime a layout needs to be set up.</li>
+  <li data-marker="*">The only thing needed to use Bootstrap is by adding a single line which links Bootstrap’s CSS stylesheet: <code class="highlighter-rouge">&lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"&gt;</code>.</li>
+  <li data-marker="*">Bootstrap’s CSS will make everything look a little cleaner and more modern, but its real power comes with its layout system. Bootstrap uses a column-based model where every row in a website is divided into 12 individual columns, and different elements can be alloted a different number of columns to fill.</li>
+  <li data-marker="*">Bootstrap’s columns and rows are referenced in HTML with <code class="highlighter-rouge">class="row"</code> and <code class="highlighter-rouge">class="col-3"</code> attributes, where the number after <code class="highlighter-rouge">col-</code> is the number of columns the element should use.
+    <ul>
+      <li data-marker="*">Elements can take up a different number of columns based on the size of the screen with attributes like <code class="highlighter-rouge">class="col-lg-3 col-sm-6</code>. On a small screen, 6 columns will be used, but in a large screen, 3 columns will be used. If another row has to be added, Bootstrap will do so automatically. This is a much easier alternative to something like flexbox (Bootstrap does so behind the scenes).</li>
+    </ul>
+  </li>
+  <li data-marker="*">Bootstrap has a whole host of other pretty components which can easily be applied by simply adding the appropriate <code class="highlighter-rouge">class</code> attribute to an element. See <a href="https://getbootstrap.com/docs/4.1/components/alerts/">Bootstrap’s documentation</a> for an extensive list.</li>
+</ul>
+
+<h2 id="sass">Sass</h2>
+
+<ul>
+  <li data-marker="*">Sass is an entirely new language built on top of CSS which gives it a little more power and flexibility when designing CSS stylesheets and allows for the generation of stylesheets in a programmatic way. Ultimately, Sass just makes writing CSS easier.</li>
+  <li data-marker="*">In order to use Sass, it must first be <a href="http://sass-lang.com/install">installed</a>. Once installed, we can execute <code class="highlighter-rouge">sass style.scss style.css</code> to compile our Sass file <code class="highlighter-rouge">style.scss</code> into <code class="highlighter-rouge">sass.css</code>, which can actually be linked to and interpreted by an HTML file.
+    <ul>
+      <li data-marker="*">If recompiling gets annoying, <code class="highlighter-rouge">sass --watch style.scss:style.css</code> to automatically recompile <code class="highlighter-rouge">style.scss</code> as <code class="highlighter-rouge">style.css</code> whenever <code class="highlighter-rouge">style.scss</code> is modified. Additionally, many website deployment systems, like GitHub Pages, have built in support for Sass. For example, if an <code class="highlighter-rouge">.scss</code> file is pushed to GitHub, GitHub Pages will compile it automatically.</li>
+    </ul>
+  </li>
+  <li data-marker="*">One feature of Sass is variables, which are defined as so: <code class="highlighter-rouge">$color: red;</code>. Anywhere <code class="highlighter-rouge">$color</code> is passed as a value for a CSS property, e.g. <code class="highlighter-rouge">color: $color</code>, <code class="highlighter-rouge">red</code> will be used.</li>
+  <li data-marker="*">Another feature is nesting, which is a more concise way to style elements which are related to other elements in a certain way.
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">div</span> <span class="p">{</span>
+      <span class="nl">font-size</span><span class="p">:</span> <span class="m">18px</span><span class="p">;</span>
+      <span class="err">p</span> <span class="err">{</span>
+          <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nt">ul</span> <span class="p">{</span>
+          <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+      <span class="p">}</span>
+  <span class="err">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">In this example, all <code class="highlighter-rouge">p</code>s inside <code class="highlighter-rouge">div</code>s will be have <code class="highlighter-rouge">color: blue</code>, but also <code class="highlighter-rouge">font-size: 18px</code>, while <code class="highlighter-rouge">ul</code>s inside <code class="highlighter-rouge">div</code>s will have <code class="highlighter-rouge">color: green</code> instead, but still also <code class="highlighter-rouge">font-size: 18px</code>.</li>
+    </ul>
+  </li>
+  <li data-marker="*">One more useful feature is inheritance, which is similar to the object-oriented concept. Sass’s inheritance allows for slight tweaking of a general style for different components.
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="o">%</span><span class="nt">message</span> <span class="p">{</span>
+      <span class="nl">font-family</span><span class="p">:</span> <span class="nb">sans-serif</span><span class="p">;</span>
+      <span class="nl">font-size</span><span class="p">:</span> <span class="m">18px</span><span class="p">;</span>
+      <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nc">.specificMessage</span> <span class="p">{</span>
+      <span class="err">@extend</span> <span class="err">%message;</span>
+      <span class="nl">background-color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*"><code class="highlighter-rouge">%message</code> defines a general pattern that can be inherited in other style definitions using the <code class="highlighter-rouge">@extend %message</code> syntax. In addition, other style properties can be added.</li>
+    </ul>
+  </li>
+</ul>
+
+
+                </main>
+                
+
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-right">
+      <a href="#">Back to top</a>
+    </p>
+    <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="/docs/4.4/getting-started/introduction/">getting started guide</a>.</p>
+		<div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+
+		</body>
+</html>
