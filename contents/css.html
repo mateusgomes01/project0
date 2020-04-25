@@ -98,19 +98,24 @@
         </ul>
       </li>
       <li data-marker="*">The <code class="highlighter-rouge">&lt;style&gt;&lt;/style&gt;</code> tags:
-  ```html</li>
-    </ul>
+      </li>
     
-      <style>
-          h5, h6 {
-              color: blue;
-              text-align: center;
-          }
-      </style>
-  
-    <p>```
-      * This is a useful paradigm to use when reusing the same styling many times throughout a page. The properties listed will apply to all of the tags that are listed.</p>
-    <ul>
+    <div class="language-css highlighter-rouge">
+    <div class="highlight">
+    <pre class="highlight"><code><span class="o">&lt;</span><span class="nt">style</span><span class="o">&gt;</span>
+    <span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span> <span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+      <span class="nl">text-align</span><span class="p">:</span> <span class="no">center</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="o">&lt;/</span><span class="nt">style</span><span class="o">&gt;</span>
+</code></pre>
+</div>
+</div>
+  </li>
+      <ul>
+        <li data-marker="*">This is a useful paradigm to use when reusing the same styling many times throughout a page. The properties listed will apply to all of the tags that are listed. 
+        </li>
+      </ul>
       <li data-marker="*">A separate <code class="highlighter-rouge">.css</code> file: add <code class="highlighter-rouge">&lt;link rel="stylesheet" href="path/to/styles.css"&gt;</code> to the header, and move the CSS code (same format as used inside the <code class="highlighter-rouge">&lt;style&gt;&lt;/style&gt;</code> tags.
         <ul>
           <li data-marker="*">This is often an even better paradigm because it separates two distinctly different things: structure (HTML) and style (CSS), while also being easier to manage and read.</li>
@@ -118,6 +123,8 @@
       </li>
     </ul>
   </li>
+
+</ul>
   <li data-marker="*">Some common CSS properties (those that take arguments in pixels often can take a percentage or simply <code class="highlighter-rouge">auto</code>):
     <ul>
       <li data-marker="*"><code class="highlighter-rouge">color: blue</code>, <code class="highlighter-rouge">color: #0c8e05</code> : can be 1 of ~140 named colors, or a hexadecimal value that represents an RGB value</li>
